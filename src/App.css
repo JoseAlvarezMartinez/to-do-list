@@ -1,0 +1,37 @@
+.light-mode-background,
+.dark-mode-background {
+  background-image: url(./assets/bg-mobile-light.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.dark-mode-background {
+  background-image: url(./assets/bg-mobile-dark.jpg);
+}
+h1 {
+  margin: 0;
+  color: #fff;
+}
+header img {
+  cursor: pointer;
+}
+.contenedor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+  padding-top: 2rem;
+}
+.input-center {
+  display: flex;
+  justify-content: center;
+}
+.input-center input {
+  width: 80%;
+  margin: 2rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: .4rem;
+}
+.input-center input::placeholder {
+  padding-left: 1rem;
+}
