@@ -37,22 +37,67 @@ header img {
 main {
   width: 89%;
   margin: 0 auto;
-  height: 20rem;
+  min-height: 20rem;
   position: relative;
   top: -2.5rem;
   border-radius: 0.4rem;
 }
 .tarea-card {
   border-bottom: 1px solid rgba(128, 128, 128, 0.527);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 .tarea-card p {
   margin: 0;
-  padding: 1rem;
+  margin-left: 1rem;
 }
-.dark-mode-input,.main-dark-mode {
+.dark-mode-input,
+.main-dark-mode {
   background-color: hsl(235, 24%, 19%);
+
   color: #fff;
 }
-.light-mode-input,.main-light-mode {
+.light-mode-input,
+.main-light-mode {
   background-color: #fff;
+}
+.circulo-tarea {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.tarea-hecha {
+  background: rgb(87, 221, 255);
+  background: linear-gradient(
+    140deg,
+    rgba(87, 221, 255, 1) 35%,
+    rgba(192, 88, 243, 1) 100%
+  );
+}
+.tarea-hecha-parrafo{
+  opacity: 30%;
+  text-decoration: line-through;
+  text-decoration-thickness: .15rem;
+}
+
+.check-icon {
+  width: 1.5rem;
+  user-select: none;
+}
+.tarea-centrado {
+  display: flex;
+  align-items: center;
+}
+.cross-icon {
+  width: 1.3rem;
+  cursor: pointer;
 }
