@@ -2,7 +2,7 @@
 .dark-mode-background {
   background-image: url(./assets/bg-mobile-light.jpg);
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 13rem;
 }
 .dark-mode-background {
   background-image: url(./assets/bg-mobile-dark.jpg);
@@ -30,8 +30,29 @@ header img {
   margin: 2rem 0;
   padding: 1rem;
   border: none;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
+  outline: none;
 }
-.input-center input::placeholder {
-  padding-left: 1rem;
+
+main {
+  width: 89%;
+  margin: 0 auto;
+  height: 20rem;
+  position: relative;
+  top: -2.5rem;
+  border-radius: 0.4rem;
+}
+.tarea-card {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.527);
+}
+.tarea-card p {
+  margin: 0;
+  padding: 1rem;
+}
+.dark-mode-input,.main-dark-mode {
+  background-color: hsl(235, 24%, 19%);
+  color: #fff;
+}
+.light-mode-input,.main-light-mode {
+  background-color: #fff;
 }
