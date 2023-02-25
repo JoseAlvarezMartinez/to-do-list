@@ -112,6 +112,7 @@ main {
   align-items: center;
   height: 50vh;
   margin-top: 0;
+  text-transform: uppercase	;
 }
 .task-contenedor {
   display: flex;
@@ -122,11 +123,7 @@ main {
   justify-content: end;
   cursor: pointer;
 }
-/* .items-left {
-  display: flex;
-  align-items: end;
-  height: 30vh;
-} */
+
 .items-left p{
   margin: 0;
   padding: 1rem;

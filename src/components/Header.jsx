@@ -3,16 +3,17 @@ import SunIcon from "../assets/icon-sun.svg";
 import { useState, useEffect } from "react";
 
 const Header = ({ setTareas, tareas, setDarkMode, darkMode }) => {
-  function generarID() {
-    const fecha = Date.now().toString(20);
-    const random = Math.random().toString(36).substr(2);
-    return fecha + random;
-  }
   const [tarea, setTarea] = useState({
     tareaInfo: "",
     check: false,
     id: generarID(),
   });
+  function generarID() {
+    const fecha = Date.now().toString(20);
+    const random = Math.random().toString(36).substr(2);
+    return fecha + random;
+  }
+
   useEffect(() => {
     if (darkMode) {
       document.body.style.backgroundColor = "hsl(235, 21%, 11%)";
@@ -39,12 +40,14 @@ const Header = ({ setTareas, tareas, setDarkMode, darkMode }) => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
+
           setTareas([...tareas, tarea]);
           setTarea({ tareaInfo: "", check: false, id: generarID() });
         }}
         className="input-center"
       >
         <input
+          maxLength={40}
           className={`${darkMode ? "dark-mode-input" : "light-mode-input"}`}
           value={tarea.tareaInfo}
           onChange={(e) => setTarea({ ...tarea, tareaInfo: e.target.value })}
@@ -52,7 +55,6 @@ const Header = ({ setTareas, tareas, setDarkMode, darkMode }) => {
           placeholder="Create a new todo..."
         />
       </form>
-
     </header>
   );
 };
