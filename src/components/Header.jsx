@@ -37,10 +37,10 @@ const Header = ({ setTareas, tareas, setDarkMode, darkMode }) => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          tarea.check=false;
+          tarea.check = false;
           tarea.id = generarID();
           setTareas([...tareas, tarea]);
-          setTarea({tareaInfo:""});
+          setTarea({ tareaInfo: "" });
         }}
         className="input-center"
       >
@@ -52,6 +52,9 @@ const Header = ({ setTareas, tareas, setDarkMode, darkMode }) => {
           placeholder="Create a new todo..."
         />
       </form>
+      <button className={`btn-vaciar ${darkMode ? "btn-dark" : "btn-light"}`} onClick={() => setTareas([])}>
+        Clear
+      </button>
     </header>
   );
 };

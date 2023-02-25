@@ -1,11 +1,14 @@
 .light-mode-background,
 .dark-mode-background {
-  background-image: url(./assets/bg-mobile-light.jpg);
+  background-image: url(./assets/bg-desktop-light.jpg);
   background-repeat: no-repeat;
-  height: 13rem;
+  background-size: cover;
+  background-position: center;
+  height: 17rem;
+
 }
 .dark-mode-background {
-  background-image: url(./assets/bg-mobile-dark.jpg);
+  background-image: url(./assets/bg-desktop-dark.jpg);
 }
 h1 {
   margin: 0;
@@ -24,10 +27,13 @@ header img {
 .input-center {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  margin: 0 1.3rem;
 }
 .input-center input {
   width: 80%;
-  margin: 2rem 0;
+  margin-top: 2rem;
+  margin-bottom: .5rem;
   padding: 1rem;
   border: none;
   border-radius: 0.4rem;
@@ -39,7 +45,7 @@ main {
   margin: 0 auto;
   min-height: 20rem;
   position: relative;
-  top: -2.5rem;
+  top: -4rem;
   border-radius: 0.4rem;
 }
 .tarea-card {
@@ -55,13 +61,13 @@ main {
   margin-left: 1rem;
 }
 .dark-mode-input,
-.main-dark-mode {
+.main-dark-mode,.btn-dark {
   background-color: hsl(235, 24%, 19%);
 
   color: #fff;
 }
 .light-mode-input,
-.main-light-mode {
+.main-light-mode,.btn-light {
   background-color: #fff;
 }
 .circulo-tarea {
@@ -109,3 +115,16 @@ main {
   margin-top: 0;
 }
 
+.btn-vaciar{
+  width: 5rem;
+  border:1px solid rgba(128, 128, 128, 0.3);
+  border-radius: .4rem;
+  padding: .4rem 1rem;
+  cursor: pointer;
+  transition: transform .5s;
+  margin: 0 1.3rem;
+  font-size: .9rem;
+}
+.btn-vaciar:hover{
+  transform:scale(1.05)
+}

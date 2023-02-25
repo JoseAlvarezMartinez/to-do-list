@@ -15,7 +15,7 @@ const Tareas = ({ tareasRegistradas, darkMode, eliminarTarea }) => {
         </>
       ) : (
         <>
-          <p className="no-tasks">No tasks have been registered yet</p>
+          <p className="no-tasks">No tasks have been registered yet.</p>
         </>
       )}
     </main>
