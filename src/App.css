@@ -112,7 +112,6 @@ main {
   align-items: center;
   height: 50vh;
   margin-top: 0;
-  text-transform: uppercase	;
 }
 .task-contenedor {
   display: flex;
@@ -124,21 +123,24 @@ main {
   cursor: pointer;
 }
 
-.items-left p{
+.items-left p {
   margin: 0;
   padding: 1rem;
   padding-left: 0;
-  margin-left:1rem;
+  margin-left: 1rem;
 }
-@media only screen and (min-width:700px){
-  main{
+@media only screen and (min-width: 700px) {
+  .no-tasks {
+    text-transform: uppercase;
+  }
+  main {
     max-width: 33rem;
   }
-  .contenedor-header{
+  .contenedor-header {
     max-width: 33rem;
   }
-  .input-center input{
+  .input-center input {
     width: 31rem;
-    margin:1rem auto;
+    margin: 1rem auto;
   }
 }
