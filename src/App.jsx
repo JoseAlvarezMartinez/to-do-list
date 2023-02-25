@@ -14,9 +14,7 @@ function App() {
 
   function eliminarTarea(id) {
     const filtrar = tareas.filter((tarea) => tarea.id !== id);
-    setTimeout(() => {
-      setTareas(filtrar);
-    },500);
+    setTareas(filtrar);
   }
 
   return (
@@ -31,6 +29,7 @@ function App() {
         tareasRegistradas={tareas}
         darkMode={darkMode}
         eliminarTarea={eliminarTarea}
+        tareas={tareas}
       />
     </>
   );

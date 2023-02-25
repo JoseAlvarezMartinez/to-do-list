@@ -1,6 +1,6 @@
 import TareaCard from "./TareaCard";
 import { useState, useEffect } from "react";
-const Tareas = ({ tareasRegistradas, darkMode, eliminarTarea }) => {
+const Tareas = ({ tareasRegistradas, darkMode, eliminarTarea, tareas }) => {
   return (
     <main className={`${darkMode ? "main-dark-mode" : "main-light-mode"}`}>
       {tareasRegistradas.length ? (
@@ -10,6 +10,7 @@ const Tareas = ({ tareasRegistradas, darkMode, eliminarTarea }) => {
               key={tarea.id}
               tarea={tarea}
               eliminarTarea={eliminarTarea}
+              tareas={tareas}
             />
           ))}
         </>

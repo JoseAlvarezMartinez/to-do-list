@@ -10,6 +10,8 @@ const Header = ({ setTareas, tareas, setDarkMode, darkMode }) => {
   }
   const [tarea, setTarea] = useState({
     tareaInfo: "",
+    check: false,
+    id: generarID(),
   });
   useEffect(() => {
     if (darkMode) {
@@ -37,24 +39,20 @@ const Header = ({ setTareas, tareas, setDarkMode, darkMode }) => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          tarea.check = false;
-          tarea.id = generarID();
           setTareas([...tareas, tarea]);
-          setTarea({ tareaInfo: "" });
+          setTarea({ tareaInfo: "", check: false, id: generarID() });
         }}
         className="input-center"
       >
         <input
           className={`${darkMode ? "dark-mode-input" : "light-mode-input"}`}
           value={tarea.tareaInfo}
-          onChange={(e) => setTarea({ tareaInfo: e.target.value })}
+          onChange={(e) => setTarea({ ...tarea, tareaInfo: e.target.value })}
           type="text"
           placeholder="Create a new todo..."
         />
       </form>
-      <button className={`btn-vaciar ${darkMode ? "btn-dark" : "btn-light"}`} onClick={() => setTareas([])}>
-        Clear
-      </button>
+
     </header>
   );
 };

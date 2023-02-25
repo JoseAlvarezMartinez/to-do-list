@@ -4,8 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 17rem;
-
+  height: 13rem;
 }
 .dark-mode-background {
   background-image: url(./assets/bg-desktop-dark.jpg);
@@ -31,9 +30,9 @@ header img {
   margin: 0 1.3rem;
 }
 .input-center input {
-  width: 80%;
+  width: 90%;
   margin-top: 2rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   padding: 1rem;
   border: none;
   border-radius: 0.4rem;
@@ -45,15 +44,12 @@ main {
   margin: 0 auto;
   min-height: 20rem;
   position: relative;
-  top: -4rem;
+  top: -2rem;
   border-radius: 0.4rem;
 }
 .tarea-card {
   border-bottom: 1px solid rgba(128, 128, 128, 0.527);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+
   padding: 1rem;
 }
 .tarea-card p {
@@ -61,13 +57,13 @@ main {
   margin-left: 1rem;
 }
 .dark-mode-input,
-.main-dark-mode,.btn-dark {
+.main-dark-mode {
   background-color: hsl(235, 24%, 19%);
 
   color: #fff;
 }
 .light-mode-input,
-.main-light-mode,.btn-light {
+.main-light-mode {
   background-color: #fff;
 }
 .circulo-tarea {
@@ -89,10 +85,10 @@ main {
     rgba(192, 88, 243, 1) 100%
   );
 }
-.tarea-hecha-parrafo{
-  opacity: 30%;
+.tarea-hecha-parrafo {
+  opacity: 55%;
   text-decoration: line-through;
-  text-decoration-thickness: .15rem;
+  text-decoration-thickness: 0.15rem;
 }
 
 .check-icon {
@@ -102,29 +98,36 @@ main {
 .tarea-centrado {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .cross-icon {
   width: 1.3rem;
   cursor: pointer;
 }
-.no-tasks{
+.no-tasks {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50vh;
   margin-top: 0;
 }
-
-.btn-vaciar{
-  width: 5rem;
-  border:1px solid rgba(128, 128, 128, 0.3);
-  border-radius: .4rem;
-  padding: .4rem 1rem;
-  cursor: pointer;
-  transition: transform .5s;
-  margin: 0 1.3rem;
-  font-size: .9rem;
+.task-contenedor {
+  display: flex;
+  align-items: center;
 }
-.btn-vaciar:hover{
-  transform:scale(1.05)
+.cross {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+/* .items-left {
+  display: flex;
+  align-items: end;
+  height: 30vh;
+} */
+.items-left p{
+  margin: 0;
+  padding: 1rem;
+  padding-left: 0;
+  margin-left:1rem;
 }
