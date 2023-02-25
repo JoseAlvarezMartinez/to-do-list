@@ -17,7 +17,7 @@ const Header = ({ setTareas, tareas, setDarkMode, darkMode }) => {
     if (darkMode) {
       document.body.style.backgroundColor = "hsl(235, 21%, 11%)";
     } else {
-      document.body.style.backgroundColor = "hsl(236, 33%, 92%)";
+      document.body.style.backgroundColor = "rgb(219 221 240)";
     }
   }, [darkMode]);
 
