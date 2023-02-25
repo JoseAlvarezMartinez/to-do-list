@@ -1,23 +1,37 @@
 import "./App.css";
 import Header from "./components/Header";
 import Tareas from "./components/Tareas";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 function App() {
-  const [tareas,setTareas] = useState(JSON.parse(localStorage.getItem("tareas")) ?? []);
-  const [darkMode,setDarkMode] = useState(false)
+  const [darkMode, setDarkMode] = useState(false);
+  const [tareas, setTareas] = useState(
+    JSON.parse(localStorage.getItem("tareas")) ?? []
+  );
 
   useEffect(() => {
-    localStorage.setItem("tareas",JSON.stringify(tareas))
-  },[tareas])
+    localStorage.setItem("tareas", JSON.stringify(tareas));
+  }, [tareas]);
 
-  function eliminarTarea(id){
-    const filtrar = tareas.filter(tarea => tarea.id !== id)
-    setTareas(filtrar)
+  function eliminarTarea(id) {
+    const filtrar = tareas.filter((tarea) => tarea.id !== id);
+    setTimeout(() => {
+      setTareas(filtrar);
+    },500);
   }
+
   return (
     <>
-      <Header setTareas={setTareas} tareas={tareas} setDarkMode={setDarkMode} darkMode={darkMode}/>
-      <Tareas tareasRegistradas={tareas} darkMode={darkMode} eliminarTarea={eliminarTarea}/>
+      <Header
+        setTareas={setTareas}
+        tareas={tareas}
+        setDarkMode={setDarkMode}
+        darkMode={darkMode}
+      />
+      <Tareas
+        tareasRegistradas={tareas}
+        darkMode={darkMode}
+        eliminarTarea={eliminarTarea}
+      />
     </>
   );
 }

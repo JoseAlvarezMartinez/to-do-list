@@ -1,15 +1,17 @@
 import IconCheck from "../assets/icon-check.svg";
-import IconCross from "../assets/icon-cross.svg";
 import { useState } from "react";
-const TareaCard = ({ tarea,eliminarTarea }) => {
+const TareaCard = ({ tarea, eliminarTarea}) => {
   const [tareaFinalizada, setTareaFinalizada] = useState(false);
-  const {tareaInfo,id} = tarea
+  const { tareaInfo, id } = tarea;
+  
   return (
-    <div className="tarea-card">
+    <div className={`tarea-card ${tareaFinalizada && "animacion"}`}>
       <div className="tarea-centrado">
         <div
           className={`${tareaFinalizada && "tarea-hecha"} circulo-tarea`}
-          onClick={() => setTareaFinalizada(!tareaFinalizada)}
+          onClick={() => {
+            setTareaFinalizada(true)
+            eliminarTarea(id)}}
         >
           {tareaFinalizada && (
             <img
@@ -20,10 +22,10 @@ const TareaCard = ({ tarea,eliminarTarea }) => {
             />
           )}
         </div>
-        <p className={`${tareaFinalizada && "tarea-hecha-parrafo"}`}>{tareaInfo}</p>
-        
+        <p className={`${tareaFinalizada && "tarea-hecha-parrafo"}`}>
+          {tareaInfo}
+        </p>
       </div>
-      <img onClick={() => eliminarTarea(id) } src={IconCross} className="cross-icon" alt="Cross Icon" />
     </div>
   );
 };

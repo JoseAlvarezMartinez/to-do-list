@@ -101,3 +101,11 @@ main {
   width: 1.3rem;
   cursor: pointer;
 }
+.no-tasks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin-top: 0;
+}
+

@@ -37,6 +37,7 @@ const Header = ({ setTareas, tareas, setDarkMode, darkMode }) => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
+          tarea.check=false;
           tarea.id = generarID();
           setTareas([...tareas, tarea]);
           setTarea({tareaInfo:""});

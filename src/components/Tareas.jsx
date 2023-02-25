@@ -1,11 +1,23 @@
 import TareaCard from "./TareaCard";
-const Tareas = ({ tareasRegistradas,darkMode,eliminarTarea }) => {
-
+import { useState, useEffect } from "react";
+const Tareas = ({ tareasRegistradas, darkMode, eliminarTarea }) => {
   return (
     <main className={`${darkMode ? "main-dark-mode" : "main-light-mode"}`}>
-      {tareasRegistradas.map((tarea) => (
-        <TareaCard key={tarea.id} tarea={tarea} eliminarTarea={eliminarTarea}/>
-      ))}
+      {tareasRegistradas.length ? (
+        <>
+          {tareasRegistradas.map((tarea) => (
+            <TareaCard
+              key={tarea.id}
+              tarea={tarea}
+              eliminarTarea={eliminarTarea}
+            />
+          ))}
+        </>
+      ) : (
+        <>
+          <p className="no-tasks">No tasks have been registered yet</p>
+        </>
+      )}
     </main>
   );
 };
