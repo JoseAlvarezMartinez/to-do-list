@@ -69,8 +69,8 @@ main {
   background-color: #fff;
 }
 .circulo-tarea {
-  width: 2rem;
-  height: 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
   border: 1px solid rgba(128, 128, 128, 0.5);
   border-radius: 50%;
 
