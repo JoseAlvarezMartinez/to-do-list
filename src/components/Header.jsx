@@ -55,6 +55,9 @@ const Header = ({ setTareas, tareas, setDarkMode, darkMode }) => {
           placeholder="Create a new todo..."
         />
       </form>
+      <div className="contenedor-btn">
+        <button onClick={() => setTareas([])} className={darkMode ? "darkModeButton" : "lightModeButton"}>Clear</button>
+      </div>
     </header>
   );
 };
